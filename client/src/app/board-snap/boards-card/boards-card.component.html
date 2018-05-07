@@ -1,0 +1,14 @@
+<mat-card (click)="selectBoard()" class="board-card">
+  <mat-card-header>
+    <mat-card-title>{{board.title}}</mat-card-title>
+  </mat-card-header>
+  <mat-grid-list [cols]="columns" rowHeight="4:3">
+    <mat-grid-tile *ngFor="let board of board.boards" class="card-select" (click)="selectBoard(board)">
+      {{board.title}}
+    </mat-grid-tile>
+  </mat-grid-list>
+</mat-card>
+<!-- 
+<div>
+  <p>{{board.title}}</p>
+</div> -->

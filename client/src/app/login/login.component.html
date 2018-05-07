@@ -1,0 +1,28 @@
+<div mat-dialog-content>
+
+</div>
+
+<form [formGroup]="loginForm">
+  <div class="vertical">
+    <mat-form-field>
+      <input matInput placeholder="Username" name="username" formControlName="username" cdkFocusInitial>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Password" name="password" formControlName="password" (keyup.enter)="onLoginSubmit()">
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button>Cancel</button>
+    <button mat-button (click)="onLoginSubmit()">Login</button>
+  </div>
+</form>
+
+<!-- <form class="form-inline" [formGroup]="loginForm">
+  <input type="text" class="form-control mb-2 mr-sm-2" name="username" placeholder="username" formControlName="username" *ngIf="!auth.isLoggedIn()">
+  <input type="password" class="form-control mb-2 mr-sm-2" name="password" placeholder="password" formControlName="password" *ngIf="!auth.isLoggedIn()">
+  <button class="btn btn-outline-secondary" *ngIf="!auth.isLoggedIn()" (click)="onLoginSubmit()">Login</button>
+  <div class="form-group" *ngIf="auth.isLoggedIn()">
+      <label > {{user?.name}}  </label>
+      <button class="btn btn-outline-secondary" (click)="logout()">Logout</button>
+  </div>
+</form> -->

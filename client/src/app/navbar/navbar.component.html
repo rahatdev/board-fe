@@ -1,0 +1,11 @@
+<!-- <nav class="navbar navbar-light">
+  <a [routerLink]="['home']" class="navbar-brand">Home</a>
+  <user-login ></user-login>
+</nav> -->
+
+<mat-toolbar>
+  <a [routerLink]="['home']" class="navbar-brand">Home</a>
+  <span class="spacer"></span>
+  <button mat-raised-button color="primary" [routerLink]="['login']" *ngIf="!auth.isLoggedIn()">Login</button>
+  <button mat-raised-button *ngIf="auth.isLoggedIn()" (click)="auth.logout()">Logout</button>
+</mat-toolbar>

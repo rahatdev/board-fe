@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~ng2-toastr/bundles/ng2-toastr.min.css";
+
+//$light-pirmary = 
+
+.vertical{
+    display: flex;
+  flex-direction: column;
+}
+
+.inline-margins {
+ margin-left: 5px;
+ margin-right: 5px;
+}
+
+.card-select {
+  background: rgb(205, 232, 241);
+}

@@ -1,0 +1,19 @@
+$offset: 1%;
+
+.board-card {
+    background: rgb(243, 243, 252);
+    position: absolute;
+    left: $offset;
+    top: $offset;
+    width: 98%;
+    height: 98%;
+  //  width: 400px;
+}
+
+div {
+    background: lavender;
+    position: absolute;
+    left: $offset;
+    top: $offset;
+    width: 98%;
+}

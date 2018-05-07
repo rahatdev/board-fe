@@ -1,0 +1,27 @@
+<mat-card class="text-center">
+  <mat-card-title>Boards</mat-card-title>
+  <mat-card-content>
+    <p>Welcome to Board Snap - your link between your physical board and the easy digital collection</p>
+
+    <mat-form-field class="inline inline-margins">
+      <input matInput placeholder="search" name="search" [(ngModel)]="searchText" cdkFocusInitial >
+    </mat-form-field>
+
+    <mat-button-toggle-group name="groupBy" aria-label="Group By">
+      <mat-button-toggle value="category" (click)="filterByCategory()">Category</mat-button-toggle>
+      <mat-button-toggle value="date" (click)="filterByDate()">Date</mat-button-toggle>
+      <mat-button-toggle value="none" (click)="showAll()">None</mat-button-toggle>
+    </mat-button-toggle-group>
+
+  </mat-card-content>
+
+
+
+  <mat-grid-list cols="2" rowHeight="2:1">
+      <!-- <boards-card *ngFor="let board of filteredBoards" [board]="board" class="card-select"></boards-card> -->
+    <mat-grid-tile *ngFor="let board of filteredBoards" class="card-select">
+      <boards-card [board]="board"></boards-card>
+    </mat-grid-tile>    
+  </mat-grid-list>
+
+</mat-card>
